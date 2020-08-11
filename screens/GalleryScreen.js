@@ -37,6 +37,7 @@ class GalleryScreen extends React.Component {
     let description = item.alt_description
       ? item.alt_description
       : item.description;
+    if (!description) return;
     description =
       description.length > 70 ? description.substr(0, 70) + "..." : description;
     return (
